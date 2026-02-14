@@ -1,0 +1,8 @@
+{
+    "private": true,
+    "devDependencies": {
+        "react": "^18.0.0",
+        "react-dom": "^18.0.0",
+        "agentation": "^2.0.0"
+    }
+}

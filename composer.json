@@ -1,0 +1,22 @@
+{
+    "name": "yourvendor/agentation-laravel",
+    "description": "Laravel Blade wrapper for Agentation — visual UI annotations for AI coding agents.",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^8.1",
+        "illuminate/support": "^10.0|^11.0|^12.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "YourVendor\\AgentationLaravel\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "YourVendor\\AgentationLaravel\\AgentationServiceProvider"
+            ]
+        }
+    }
+}
