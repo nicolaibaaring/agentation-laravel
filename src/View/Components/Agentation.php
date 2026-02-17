@@ -1,6 +1,6 @@
 <?php
 
-namespace Nicolaibaaring\AgentationLaravel\View\Components;
+namespace NicolaiBaaring\AgentationLaravel\View\Components;
 
 use Illuminate\View\Component;
 

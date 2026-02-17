@@ -1,9 +1,9 @@
 <?php
 
-namespace Nicolaibaaring\AgentationLaravel;
+namespace NicolaiBaaring\AgentationLaravel;
 
 use Illuminate\Support\ServiceProvider;
-use Nicolaibaaring\AgentationLaravel\View\Components\Agentation;
+use NicolaiBaaring\AgentationLaravel\View\Components\Agentation;
 
 class AgentationServiceProvider extends ServiceProvider
 {

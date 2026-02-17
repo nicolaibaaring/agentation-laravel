@@ -9,13 +9,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Nicolaibaaring\\AgentationLaravel\\": "src/"
+            "NicolaiBaaring\\AgentationLaravel\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Nicolaibaaring\\AgentationLaravel\\AgentationServiceProvider"
+                "NicolaiBaaring\\AgentationLaravel\\AgentationServiceProvider"
             ]
         }
     }
