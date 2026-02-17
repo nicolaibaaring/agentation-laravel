@@ -16,7 +16,7 @@ Works with any Laravel frontend: Livewire, Alpine, Vue, or plain Blade. The Reac
 **1. Install the Composer package**
 
 ```bash
-composer require yourvendor/agentation-laravel --dev
+composer require nicolaibaaring/agentation-laravel --dev
 ```
 
 **2. Publish the JS assets**
@@ -33,14 +33,14 @@ This copies the JS entry point to `resources/vendor/agentation-laravel/agentatio
 npm install react react-dom agentation -D
 ```
 
-**4. Register the Vite entry point**
+**4. Add the Vite plugin**
 
-Add the agentation JS file to your `vite.config.js` inputs:
+Import the agentation plugin and add it alongside your existing Laravel plugin:
 
 ```js
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
-import react from '@vitejs/plugin-react';
+import agentation from 'agentation-laravel/vite';
 
 export default defineConfig({
     plugins: [
@@ -48,20 +48,15 @@ export default defineConfig({
             input: [
                 'resources/css/app.css',
                 'resources/js/app.js',
-                'resources/vendor/agentation-laravel/agentation.js', // Add this
             ],
             refresh: true,
         }),
-        react(), // Add this
+        agentation(),
     ],
 });
 ```
 
-Install the React Vite plugin if you don't have it:
-
-```bash
-npm install @vitejs/plugin-react -D
-```
+The plugin handles everything automatically — it registers the entry point and loads the React transform only during `npm run dev`. Running `npm run build` produces no React-related output in your production bundle.
 
 **5. Add the component to your layout**
 
@@ -117,8 +112,8 @@ The component includes two layers of environment protection: a `shouldRender()` 
 ## Uninstalling
 
 ```bash
-composer remove yourvendor/agentation-laravel
-npm uninstall react react-dom agentation @vitejs/plugin-react
+composer remove nicolaibaaring/agentation-laravel
+npm uninstall react react-dom agentation
 ```
 
-Remove the Vite input line from `vite.config.js`, the `react()` plugin (if no longer needed), the `<x-agentation />` tag from your layout, and the `resources/vendor/agentation-laravel/` directory.
+Remove the `agentation()` plugin from `vite.config.js`, the `<x-agentation />` tag from your layout, and the `resources/vendor/agentation-laravel/` directory.

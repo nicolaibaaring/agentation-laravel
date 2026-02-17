@@ -1,5 +1,5 @@
 {
-    "name": "yourvendor/agentation-laravel",
+    "name": "nicolaibaaring/agentation-laravel",
     "description": "Laravel Blade wrapper for Agentation — visual UI annotations for AI coding agents.",
     "type": "library",
     "license": "MIT",
@@ -9,13 +9,13 @@
     },
     "autoload": {
         "psr-4": {
-            "YourVendor\\AgentationLaravel\\": "src/"
+            "Nicolaibaaring\\AgentationLaravel\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "YourVendor\\AgentationLaravel\\AgentationServiceProvider"
+                "Nicolaibaaring\\AgentationLaravel\\AgentationServiceProvider"
             ]
         }
     }
